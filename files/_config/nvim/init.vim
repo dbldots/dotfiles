@@ -34,7 +34,6 @@ Plug 'zchee/deoplete-go'
 Plug 'mhartington/nvim-typescript'
 Plug 'Shougo/echodoc.vim'
 
-
 Plug 'Quramy/vison'
 Plug 'keith/swift.vim'
 Plug 'kchmck/vim-coffee-script'
@@ -43,6 +42,8 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'fatih/vim-go'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'Quramy/tsuquyomi'
+Plug 'posva/vim-vue'
+Plug 'Quramy/tsuquyomi-vue'
 
 Plug 'tpope/vim-markdown'
 Plug 'suan/vim-instant-markdown'
@@ -51,7 +52,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'davidoc/taskpaper.vim'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'Alok/notational-fzf-vim'
+"Plug 'Alok/notational-fzf-vim'
 
 call plug#end()
 
@@ -116,6 +117,9 @@ function! s:check_back_space() abort "{{{
 endfunction"}}}
 
 set completeopt-=preview
+
+let g:python3_host_prog = "/usr/bin/python3"
+let g:python_host_prog = "/usr/bin/python2"
 
 set noshowmode    " DOES WORK
 let g:echodoc_enable_at_startup = 1
@@ -310,8 +314,6 @@ let g:netrw_list_hide= '^\.'
 
 " Allow netrw to remove non-empty local directories
 let g:netrw_localrmdir='rm -r'
-
-let g:nv_search_paths = ['~/Nextcloud/private', '~/Nextcloud/mpx/notes', '~/Nextcloud/mpx/ES', '~/Nextcloud/mpx/tasks.taskpaper']
 
 " Change directory to the current buffer when opening files.
 autocmd BufEnter * silent! lcd %:p:h
