@@ -149,6 +149,10 @@ if &term =~ '^screen'
   set ttymouse=xterm2
 endif
 
+" Make `jj` and `jk` throw you into normal mode
+inoremap jj <esc>
+inoremap jk <esc>
+
 " toggle color scheme
 nnoremap <leader>tc :call BackgroundToggle()<CR>
 
