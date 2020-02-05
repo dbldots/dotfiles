@@ -358,3 +358,28 @@ function! BackgroundToggle()
 		exe "colorscheme " . g:colors_name
 	endif
 endfunc
+
+" netrw enable non-empty dirs to be deleted BEGIN
+" kudos to https://vi.stackexchange.com/a/5532 and https://www.reddit.com/r/vim/comments/7fzqm9/how_to_use_d_on_netrw_directory_to_delete_a/
+function! s:rmdir()
+  let b = fnamemodify(bufname(''),':p').getline('.')
+  if input('delete '.b.' ? (y/n) ') ==# 'y'
+    if !delete(b,'rf')
+      if search('^\.\/$','Wb')
+        exe "norm \<cr>"
+      endif
+    endif
+    exe "Explore"
+  endif
+endfunction
+command! Rmnetrw call <SID>rmdir()
+
+augroup netrw_mapping
+    autocmd!
+    autocmd filetype netrw call NetrwMapping()
+augroup END
+
+function! NetrwMapping()
+    noremap <buffer> D :Rmnetrw<CR>
+endfunction
+" netrw enable non-empty dirs to be deleted END
