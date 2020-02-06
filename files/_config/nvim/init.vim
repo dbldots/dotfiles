@@ -291,9 +291,6 @@ let g:netrw_list_hide= '^\.'
 " Default to tree mode
 "let g:netrw_liststyle=3
 
-" Allow netrw to remove non-empty local directories
-let g:netrw_localrmdir='rm -r'
-
 let g:nv_search_paths = ['~/Nextcloud/private', '~/Nextcloud/mpx/notes', '~/Nextcloud/mpx/ES', '~/Nextcloud/mpx/tasks.taskpaper']
 
 " Change directory to the current buffer when opening files.
@@ -381,5 +378,11 @@ augroup END
 
 function! NetrwMapping()
     noremap <buffer> D :Rmnetrw<CR>
+
+    " enable tmux navigate in netrw, too
+    nnoremap <buffer> <silent> <C-h> :TmuxNavigateLeft<cr>
+    nnoremap <buffer> <silent> <C-j> :TmuxNavigateDown<cr>
+    nnoremap <buffer> <silent> <C-k> :TmuxNavigateUp<cr>
+    nnoremap <buffer> <silent> <C-l> :TmuxNavigateRight<cr>
 endfunction
 " netrw enable non-empty dirs to be deleted END
