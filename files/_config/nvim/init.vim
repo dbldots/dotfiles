@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'altercation/vim-colors-solarized'
+"Plug 'altercation/vim-colors-solarized'
+Plug 'aaron-edwards/vim-solarized-patched'
 
 Plug 'sjl/gundo.vim'
 Plug 'majutsushi/tagbar'
