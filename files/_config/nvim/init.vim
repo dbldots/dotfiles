@@ -28,10 +28,13 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'diepm/vim-rest-console'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-solargraph', {'do': 'yarn install --frozen-lockfile'} " ruby
 Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-lists', {'do': 'yarn install --frozen-lockfile'} " mru and stuff
+Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
 
 Plug 'Quramy/vison'
 Plug 'keith/swift.vim'
@@ -40,6 +43,7 @@ Plug 'cakebaker/scss-syntax.vim'
 Plug 'vim-ruby/vim-ruby'
 Plug 'fatih/vim-go'
 Plug 'HerringtonDarkholme/yats.vim'
+Plug 'prettier/vim-prettier'
 
 Plug 'tpope/vim-markdown'
 Plug 'suan/vim-instant-markdown'
