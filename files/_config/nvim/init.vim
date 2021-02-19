@@ -296,7 +296,7 @@ let g:netrw_list_hide= '^\.'
 " Default to tree mode
 "let g:netrw_liststyle=3
 
-let g:nv_search_paths = ['~/Nextcloud/private', '~/Nextcloud/mpx/notes', '~/Nextcloud/mpx/ES', '~/Nextcloud/mpx/tasks.taskpaper']
+let g:nv_search_paths = ['~/Nextcloud/notes', '~/Nextcloud/private/notes', '~/Nextcloud/mpx/notes', '~/Nextcloud-MFX']
 
 " Change directory to the current buffer when opening files.
 autocmd BufEnter * silent! lcd %:p:h
